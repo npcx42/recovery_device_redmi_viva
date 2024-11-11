@@ -38,7 +38,7 @@ fi
 
 # Dirty Fix: Only declare orangefox vars when needed
 if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
-	echo -e "\x1b[96m[INFO]: Setting up OrangeFox build vars for rosemary...\x1b[m"
+	echo -e "\x1b[96m[INFO]: Setting up OrangeFox build vars for viva...\x1b[m"
 	if [ "$1" = "$FDEVICE" ] || [  "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		# Version / Maintainer infos
 		export OF_MAINTAINER="thinkaboutrue"
@@ -68,7 +68,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_HIDE_NOTCH=1
 		export OF_CLOCK_POS=1 # left and right clock positions available
 		export OF_USE_GREEN_LED=0
-		export OF_FL_PATH1="/tmp/flashlight" # See /init.recovery.mt6785.rc for more information
+		export OF_FL_PATH1="/tmp/flashlight" # See /init.recovery.mt6781.rc for more information
 
 		# Other OrangeFox configs
 		export OF_ENABLE_LPTOOLS=1
